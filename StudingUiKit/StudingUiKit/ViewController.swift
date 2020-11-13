@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     }
 //IBAction создаем снизу как метод, с типом Uibutton
     @IBAction func pressedButton(_ sender: UIButton) {
+        label.isHidden = false
         label.text = "Hello, world"
     }
 }
