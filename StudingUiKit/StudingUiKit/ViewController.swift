@@ -16,7 +16,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+//Изменим свойства нашей надписи (label)
+        label.isHidden = true //сделали кнопку скрытой
+        label.font = label.font.withSize(32) //изменили размер текста
+        label.textColor = UIColor.red //или просто .red
+        
+//Изменим свойства нашей кнопки (button)
+        button.setTitle("Get result", for: .normal) //изменили название надписи
+        button.setTitleColor(.blue, for: .normal) //изменили цвет написи
+        button.backgroundColor = .green //изменили цветфона кнопки
     }
 //IBAction создаем снизу как метод, с типом Uibutton
     @IBAction func pressedButton(_ sender: UIButton) {
