@@ -24,11 +24,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neU-xx-RGj">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neU-xx-RGj">
                                 <rect key="frame" x="123" y="552" width="184" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2bg-pK-X19"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EsT-54-kpJ">
+                                <rect key="frame" x="123" y="501" width="184" height="30"/>
+                                <state key="normal" title="Action 2"/>
+                                <connections>
+                                    <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n67-P3-cFz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOC-83-duh">
+                                <rect key="frame" x="123" y="446" width="184" height="30"/>
+                                <state key="normal" title="Action 1"/>
+                                <connections>
+                                    <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="066-Db-HQM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -36,16 +50,24 @@
                         <color key="backgroundColor" red="0.95398151606387582" green="1" blue="0.54845785260499735" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="clT-kj-0q4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0VZ-xf-3TL"/>
+                            <constraint firstItem="EsT-54-kpJ" firstAttribute="leading" secondItem="neU-xx-RGj" secondAttribute="leading" id="1cR-qF-cly"/>
                             <constraint firstItem="clT-kj-0q4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="6K6-yd-Ofd"/>
+                            <constraint firstItem="KOC-83-duh" firstAttribute="leading" secondItem="EsT-54-kpJ" secondAttribute="leading" id="8SH-jW-Xgd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="neU-xx-RGj" secondAttribute="trailing" constant="107" id="EZI-x2-eTU"/>
+                            <constraint firstItem="KOC-83-duh" firstAttribute="trailing" secondItem="EsT-54-kpJ" secondAttribute="trailing" id="Lcs-nv-jqB"/>
+                            <constraint firstItem="EsT-54-kpJ" firstAttribute="top" secondItem="KOC-83-duh" secondAttribute="bottom" constant="25" id="ZQd-wK-Hfb"/>
                             <constraint firstItem="clT-kj-0q4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="223" id="ZnC-AV-NR6"/>
                             <constraint firstItem="neU-xx-RGj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="clx-15-cxH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="neU-xx-RGj" secondAttribute="bottom" constant="280" id="f3T-hU-ebb"/>
+                            <constraint firstItem="neU-xx-RGj" firstAttribute="top" secondItem="EsT-54-kpJ" secondAttribute="bottom" constant="21" id="hK9-9d-mPR"/>
+                            <constraint firstItem="EsT-54-kpJ" firstAttribute="trailing" secondItem="neU-xx-RGj" secondAttribute="trailing" id="q9x-XX-2WU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="button" destination="neU-xx-RGj" id="hiL-Uq-E1r"/>
                         <outlet property="label" destination="clT-kj-0q4" id="pUO-qP-saK"/>
+                        <outletCollection property="actionButtons" destination="KOC-83-duh" collectionClass="NSMutableArray" id="6rG-bp-mTc"/>
+                        <outletCollection property="actionButtons" destination="EsT-54-kpJ" collectionClass="NSMutableArray" id="HIl-wJ-xjQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
